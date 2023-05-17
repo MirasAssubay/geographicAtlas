@@ -17,7 +17,7 @@ extension UILabel {
         return label
     }
     
-    static func makeMultilineLabel(text: String) -> UILabel {
+    static func makeMultilineLabel() -> UILabel {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 15, weight: .light)

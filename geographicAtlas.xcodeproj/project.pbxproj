@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6D2BBCC32A134B6D00CCBE71 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 6D2BBCC22A134B6D00CCBE71 /* SkeletonView */; };
+		6D2BBCD82A148C0100CCBE71 /* geographicAtlasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2BBCD72A148C0100CCBE71 /* geographicAtlasTests.swift */; };
+		6D2BBCE02A14909B00CCBE71 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6D2BBCDF2A14909B00CCBE71 /* SDWebImage */; };
+		6D2BBCE22A14909B00CCBE71 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6D2BBCE12A14909B00CCBE71 /* SDWebImageMapKit */; };
+		6D2BBCE42A1493CD00CCBE71 /* CountryDetailsViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2BBCE32A1493CD00CCBE71 /* CountryDetailsViewTest.swift */; };
 		6D4084012A0E30DF00E7125F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4084002A0E30DF00E7125F /* Country.swift */; };
 		6D4084032A0F7D6B00E7125F /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4084022A0F7D6B00E7125F /* APICaller.swift */; };
 		6D4084062A0F825F00E7125F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6D4084052A0F825F00E7125F /* SDWebImage */; };
@@ -23,7 +27,20 @@
 		6DD853342A0CE3B900727034 /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD853332A0CE3B900727034 /* CountryDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6D2BBCD92A148C0100CCBE71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DD853122A0CE33F00727034 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DD853192A0CE33F00727034;
+			remoteInfo = geographicAtlas;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		6D2BBCD52A148C0100CCBE71 /* geographicAtlasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = geographicAtlasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D2BBCD72A148C0100CCBE71 /* geographicAtlasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geographicAtlasTests.swift; sourceTree = "<group>"; };
+		6D2BBCE32A1493CD00CCBE71 /* CountryDetailsViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsViewTest.swift; sourceTree = "<group>"; };
 		6D4084002A0E30DF00E7125F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		6D4084022A0F7D6B00E7125F /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		6D4084162A10FEF300E7125F /* CountryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailsView.swift; sourceTree = "<group>"; };
@@ -40,6 +57,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6D2BBCD22A148C0100CCBE71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D2BBCE22A14909B00CCBE71 /* SDWebImageMapKit in Frameworks */,
+				6D2BBCE02A14909B00CCBE71 /* SDWebImage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6DD853172A0CE33F00727034 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,6 +79,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D2BBCD62A148C0100CCBE71 /* geographicAtlasTests */ = {
+			isa = PBXGroup;
+			children = (
+				6D2BBCE32A1493CD00CCBE71 /* CountryDetailsViewTest.swift */,
+				6D2BBCD72A148C0100CCBE71 /* geographicAtlasTests.swift */,
+			);
+			path = geographicAtlasTests;
+			sourceTree = "<group>";
+		};
+		6D2BBCDE2A14909B00CCBE71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6D40840B2A0FBAAA00E7125F /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				6DD8531C2A0CE33F00727034 /* geographicAtlas */,
+				6D2BBCD62A148C0100CCBE71 /* geographicAtlasTests */,
 				6DD8531B2A0CE33F00727034 /* Products */,
+				6D2BBCDE2A14909B00CCBE71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				6DD8531A2A0CE33F00727034 /* geographicAtlas.app */,
+				6D2BBCD52A148C0100CCBE71 /* geographicAtlasTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +176,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6D2BBCD42A148C0100CCBE71 /* geographicAtlasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D2BBCDD2A148C0100CCBE71 /* Build configuration list for PBXNativeTarget "geographicAtlasTests" */;
+			buildPhases = (
+				6D2BBCD12A148C0100CCBE71 /* Sources */,
+				6D2BBCD22A148C0100CCBE71 /* Frameworks */,
+				6D2BBCD32A148C0100CCBE71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D2BBCDA2A148C0100CCBE71 /* PBXTargetDependency */,
+			);
+			name = geographicAtlasTests;
+			packageProductDependencies = (
+				6D2BBCDF2A14909B00CCBE71 /* SDWebImage */,
+				6D2BBCE12A14909B00CCBE71 /* SDWebImageMapKit */,
+			);
+			productName = geographicAtlasTests;
+			productReference = 6D2BBCD52A148C0100CCBE71 /* geographicAtlasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6DD853192A0CE33F00727034 /* geographicAtlas */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6DD8532E2A0CE34100727034 /* Build configuration list for PBXNativeTarget "geographicAtlas" */;
@@ -163,6 +230,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					6D2BBCD42A148C0100CCBE71 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 6DD853192A0CE33F00727034;
+					};
 					6DD853192A0CE33F00727034 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -186,11 +257,19 @@
 			projectRoot = "";
 			targets = (
 				6DD853192A0CE33F00727034 /* geographicAtlas */,
+				6D2BBCD42A148C0100CCBE71 /* geographicAtlasTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6D2BBCD32A148C0100CCBE71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6DD853182A0CE33F00727034 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,6 +282,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6D2BBCD12A148C0100CCBE71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D2BBCE42A1493CD00CCBE71 /* CountryDetailsViewTest.swift in Sources */,
+				6D2BBCD82A148C0100CCBE71 /* geographicAtlasTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6DD853162A0CE33F00727034 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,6 +309,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6D2BBCDA2A148C0100CCBE71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6DD853192A0CE33F00727034 /* geographicAtlas */;
+			targetProxy = 6D2BBCD92A148C0100CCBE71 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		6DD853282A0CE34100727034 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -233,6 +329,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6D2BBCDB2A148C0100CCBE71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y3FN6JQNCX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MirasAssubay.geographicAtlasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/geographicAtlas.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/geographicAtlas";
+			};
+			name = Debug;
+		};
+		6D2BBCDC2A148C0100CCBE71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y3FN6JQNCX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MirasAssubay.geographicAtlasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/geographicAtlas.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/geographicAtlas";
+			};
+			name = Release;
+		};
 		6DD8532C2A0CE34100727034 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -404,6 +544,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6D2BBCDD2A148C0100CCBE71 /* Build configuration list for PBXNativeTarget "geographicAtlasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D2BBCDB2A148C0100CCBE71 /* Debug */,
+				6D2BBCDC2A148C0100CCBE71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6DD853152A0CE33F00727034 /* Build configuration list for PBXProject "geographicAtlas" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -448,6 +597,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6D2BBCC12A134B6D00CCBE71 /* XCRemoteSwiftPackageReference "SkeletonView" */;
 			productName = SkeletonView;
+		};
+		6D2BBCDF2A14909B00CCBE71 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D4084042A0F825F00E7125F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		6D2BBCE12A14909B00CCBE71 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D4084042A0F825F00E7125F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
 		};
 		6D4084052A0F825F00E7125F /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;

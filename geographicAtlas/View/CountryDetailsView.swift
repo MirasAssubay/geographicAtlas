@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
 
 class CountryDetailsView: UIScrollView {
+    
+    var capitalCoordinates: [Double]? = [Double]()
     
     let flagImageView: UIImageView = {
         let imageView = UIImageView()
@@ -18,13 +22,13 @@ class CountryDetailsView: UIScrollView {
         return imageView
     }()
     
-    let regionLabel = UILabel.makeMultilineLabel(text: "Region:")
-    let capitalLabel = UILabel.makeMultilineLabel(text: "Capital:")
-    let capitalCoordsLabel = UILabel.makeMultilineLabel(text: "Capital coordinates:")
-    let populationLabel = UILabel.makeMultilineLabel(text: "Population:")
-    let areaLabel = UILabel.makeMultilineLabel(text: "Area:")
-    let currencyLabel = UILabel.makeMultilineLabel(text: "Currency:")
-    let timezoneLabel = UILabel.makeMultilineLabel(text: "Timezones:")
+    let regionLabel = UILabel.makeMultilineLabel()
+    let capitalLabel = UILabel.makeMultilineLabel()
+    let capitalCoordsLabel = UILabel.makeMultilineLabel()
+    let populationLabel = UILabel.makeMultilineLabel()
+    let areaLabel = UILabel.makeMultilineLabel()
+    let currencyLabel = UILabel.makeMultilineLabel()
+    let timezoneLabel = UILabel.makeMultilineLabel()
     
     let stackView: UIStackView = {
         let stackView = UIStackView()
@@ -57,12 +61,17 @@ class CountryDetailsView: UIScrollView {
         [regionLabel, capitalLabel, capitalCoordsLabel, populationLabel, areaLabel, currencyLabel, timezoneLabel].forEach { stackView.addArrangedSubview($0) }
         contentView.addSubview(stackView)
         
+        // making capitalCoordsLabel tappable
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        capitalCoordsLabel.isUserInteractionEnabled = true
+        capitalCoordsLabel.addGestureRecognizer(tapGesture)
+
         setConstraints()
     }
     
     func set(_ country: Country) {
         
-        
+        capitalCoordinates = country.capitalInfo.latlng
         // getting only .png flag from country.flag
         var updatedCountry = country
         let pngFlags = country.flags.filter { $0.value.lowercased().hasSuffix(".png") }
@@ -132,4 +141,24 @@ class CountryDetailsView: UIScrollView {
                 stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
             ])
         }
+}
+
+
+//MARK: - Make capitalCoordsLabel to open map on click
+extension CountryDetailsView {
+    @objc func handleTap(_ gesture: UITapGestureRecognizer) {
+        if let coords = capitalCoordinates {
+            // Opening map with coordinates
+            openMapWithCoordinates(latitude: coords[0], longitude: coords[1])
+        }
+    }
+
+    func openMapWithCoordinates(latitude: Double, longitude: Double) {
+        let locationCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        
+        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: locationCoordinate))
+        mapItem.name = "Capital"
+        // Open the map using map items
+        mapItem.openInMaps(launchOptions: nil)
+    }
 }
