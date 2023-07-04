@@ -2,4 +2,4 @@
 Test assignment for internship in Strongte.am
 
 
-# Advanced 
+![alt text](https://github.com/MirasAssubay/geographicAtlas/blob/main/CountriesList.png?raw=true)
