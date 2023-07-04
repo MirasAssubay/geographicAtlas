@@ -32,7 +32,7 @@ class CountriesListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = UIColor.lightGray
+//        navigationController?.navigationBar.barTintColor = UIColor.lightGray
         title = "World Countries"
         setup()
         setupTable()
@@ -178,12 +178,7 @@ extension CountriesListViewController: UITableViewDelegate, UITableViewDataSourc
             }
         }
         
-        
-        //MARK: - ONLY FOR DEMONSTRATION OF SKELETON VIEW, COMMENT OR DELETE DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) TO GET RID OF LOADING TABLEVIEWCELLS
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-            cell.hideSkeleton()
-        }
-        
+        cell.hideSkeleton()
         
         // Adding expandable feature for each cell
         let isExpanded = expandedIndexPaths.contains(indexPath)
